@@ -1,0 +1,265 @@
+/* Pi Web 1.202611.2 / 07b7665. All rules are restricted to core roots.
+   No generic .ui-button rules, palette replacement, or plugin-content selectors.
+   Internal chrome selectors are deliberately isolated from supported hooks. */
+
+/* 1. Core shell: paint only; do not change inherited font/color/tokens. */
+:host(pi-web-app) .shell,
+:host(pi-web-app) main,
+:host(pi-web-app) .composer-area { background: var(--dt-bg); }
+:host(pi-web-app) aside { background: var(--dt-sidebar); }
+:host(pi-web-app) .context-bar { background: var(--dt-sidebar); border-color: var(--dt-border); }
+:host(pi-web-app) .context-chip {
+  color: var(--dt-text); background: var(--dt-panel); border-color: var(--dt-border);
+}
+:host(pi-web-app) .context-chip:hover { background: var(--dt-hover); }
+:host(pi-web-app) .empty { color: var(--dt-secondary); }
+:host(app-navigation-panel) header { background: var(--dt-sidebar); border-color: var(--dt-border); }
+:host(app-navigation-panel) .ui-button {
+  color: var(--dt-text); background: var(--dt-sidebar); border-color: var(--dt-border);
+}
+:host(app-panel-edge-control) button { background: var(--dt-sidebar); border-color: var(--dt-border); color: var(--dt-secondary); }
+
+/* 2. Shared navigation anatomy. Never recolor plugin-provided label wrappers. */
+:host(project-list) section { background: var(--dt-project-surface); }
+:host(workspace-list) section { background: var(--dt-sidebar); }
+:host(session-list) section { background: var(--dt-session-surface); }
+:host(project-list) section > h2,
+:host(workspace-list) section > h2,
+:host(session-list) section > h2 {
+  background: var(--dt-panel); border-block: 1px solid var(--dt-border);
+  margin-block: 5px; min-block-size: 42px; box-shadow: none;
+}
+:host(project-list) section > h2 {
+  background: var(--dt-project-surface); border-block-color: var(--dt-project-border);
+}
+:host(session-list) section > h2 {
+  background: var(--dt-session-surface); border-block-color: var(--dt-session-border);
+}
+:host(project-list) h2 .ui-button,
+:host(workspace-list) h2 .ui-button,
+:host(session-list) h2 .ui-button {
+  color: var(--dt-text); background: transparent; font-weight: 650;
+}
+:host(project-list) h2 .ui-button { color: var(--dt-project-heading); }
+:host(session-list) h2 .ui-button { color: var(--dt-session-heading); }
+:host(project-list) .ui-nav-list,
+:host(workspace-list) .ui-nav-list,
+:host(session-list) .ui-nav-list {
+  padding-inline: var(--dt-space); scrollbar-color: var(--dt-border) var(--dt-sidebar);
+}
+:host(project-list) .ui-nav-list { scrollbar-color: var(--dt-border) var(--dt-project-surface); }
+:host(session-list) .ui-nav-list { scrollbar-color: var(--dt-border) var(--dt-session-surface); }
+:host(project-list) .ui-nav-row,
+:host(workspace-list) .ui-nav-row,
+:host(session-list) .ui-nav-row { margin-block: 3px; border-radius: var(--dt-radius); }
+:host(project-list) .ui-nav-row-main,
+:host(workspace-list) .ui-nav-row-main,
+:host(session-list) .ui-nav-row-main {
+  background: transparent; border-color: transparent; border-block-end-color: var(--dt-border);
+  min-block-size: 49px; padding-block: 9px; border-radius: 0;
+  border-inline-start-width: 4px;
+  border-start-start-radius: var(--dt-radius); border-end-start-radius: var(--dt-radius);
+}
+:host(project-list) .ui-nav-row-main,
+:host(session-list) .ui-nav-row-main { border-block-end-color: transparent; }
+:host(project-list) .ui-nav-row-action,
+:host(workspace-list) .ui-nav-row-action,
+:host(session-list) .ui-nav-row-action {
+  background: transparent; border-color: transparent; color: var(--dt-secondary); border-radius: 0;
+  border-start-end-radius: var(--dt-radius); border-end-end-radius: var(--dt-radius);
+}
+:host(project-list) .ui-nav-row-label,
+:host(session-list) .ui-nav-row-label,
+:host(workspace-list) .workspace-primary-label { color: var(--dt-text); font-weight: 600; line-height: 1.35; }
+:host(project-list) .ui-nav-row-meta,
+:host(session-list) .session-meta { color: var(--dt-secondary); font-size: 12px; line-height: 1.5; }
+:host(project-list) .ui-nav-row-meta { color: var(--dt-project-meta); }
+:host(project-list) .ui-nav-row:hover .ui-nav-row-main { background: var(--dt-project-hover); }
+:host(workspace-list) .ui-nav-row:hover .ui-nav-row-main { background: var(--dt-panel); }
+:host(session-list) .ui-nav-row:hover .ui-nav-row-main { background: var(--dt-session-hover); }
+:host(workspace-list) .ui-nav-row[data-current="true"] .ui-nav-row-main {
+  background: var(--dt-selection); border-color: var(--dt-accent);
+  border-inline-start-color: var(--dt-accent);
+}
+:host(project-list) .ui-nav-row[data-current="true"] .ui-nav-row-main {
+  background: var(--dt-project-selected); border-color: transparent;
+  border-inline-start-color: var(--dt-project-edge);
+}
+:host(project-list) .ui-nav-row[data-current="true"] .ui-nav-row-meta {
+  color: var(--dt-project-meta-selected);
+}
+:host(session-list) .ui-nav-row[data-current="true"] .ui-nav-row-main,
+:host(session-list) .ui-nav-row[data-selected="true"] .ui-nav-row-main {
+  background: var(--dt-session-selected); border-color: transparent;
+  border-inline-start-color: var(--dt-session-edge);
+}
+:host(workspace-list) .ui-nav-row[data-current="true"] .ui-nav-row-action {
+  background: var(--dt-selection); color: var(--dt-text);
+}
+:host(project-list) .ui-nav-row[data-current="true"] .ui-nav-row-action {
+  background: var(--dt-project-selected);
+}
+:host(session-list) .ui-nav-row[data-current="true"] .ui-nav-row-action,
+:host(session-list) .ui-nav-row[data-selected="true"] .ui-nav-row-action {
+  background: var(--dt-session-selected); color: var(--dt-text);
+}
+:host(workspace-list) .ui-nav-row:focus-visible { outline: 2px solid var(--dt-accent); outline-offset: -2px; }
+:host(project-list) .ui-nav-row:focus-visible { outline: 2px solid var(--dt-project-edge); outline-offset: -2px; }
+:host(session-list) .ui-nav-row:focus-visible { outline: 2px solid var(--dt-session-edge); outline-offset: -2px; }
+/* Root-local popovers only; native positioning and visibility remain untouched. */
+:host(project-list) .ui-popup-panel,
+:host(workspace-list) .ui-popup-panel,
+:host(session-list) .ui-popup-panel {
+  background: var(--dt-panel); color: var(--dt-text); border-color: var(--dt-border);
+}
+:host(project-list) .ui-menu-item,
+:host(workspace-list) .ui-menu-item,
+:host(session-list) .ui-menu-item { color: var(--dt-text); }
+:host(project-list) .ui-menu-item.danger,
+:host(workspace-list) .ui-menu-item.danger,
+:host(session-list) .ui-menu-item.danger { color: var(--dt-error); }
+
+/* 3. Chat: message frames and event headers, never custom renderer bodies. */
+:host(chat-view) .chat {
+  background: var(--dt-bg); padding: var(--dt-space);
+  scrollbar-color: var(--dt-border) var(--dt-bg);
+}
+:host(chat-view) .chat-message {
+  background: var(--dt-bg); border: 1px solid var(--dt-border);
+  border-inline-start-width: 3px; border-radius: var(--dt-radius);
+  margin-block-end: var(--dt-space);
+}
+:host(chat-view) .chat-message[data-speaker="user"] {
+  background: var(--dt-user-surface); border-color: var(--dt-user-border);
+  border-inline-start-color: var(--dt-user-edge);
+  margin-inline-start: clamp(0px, 5%, 48px);
+}
+:host(chat-view) .chat-message[data-speaker="assistant"] {
+  background: var(--dt-assistant-surface); border-color: var(--dt-assistant-border);
+  border-inline-start-color: var(--dt-assistant-edge);
+}
+:host(chat-view) .chat-message-body { color: var(--dt-text); font-size: 15px; line-height: 1.6; }
+:host(chat-view) .chat-message-meta { color: var(--dt-secondary); }
+/* Only the core message's own Markdown leaf, not formatted text in plugins. */
+:host(chat-view) .chat-message-body > formatted-text.part {
+  --formatted-link-color: var(--dt-accent); --formatted-muted-color: var(--dt-secondary);
+}
+:host(chat-view) .msg.event-group {
+  background: transparent; border: 1px solid transparent;
+  border-radius: 6px; margin-block-end: 4px;
+}
+:host(chat-view) .msg.event-group > summary {
+  background: transparent; color: var(--dt-event-label); border-radius: 6px;
+  min-block-size: 26px; font-size: 12px; line-height: 1.4; padding-block: 3px;
+}
+:host(chat-view) .msg.event-group > summary:hover,
+:host(chat-view) .msg.event-group[open] > summary {
+  background: var(--dt-panel); color: var(--dt-text);
+}
+:host(chat-view) .msg.event-group > summary:focus-visible {
+  outline: 2px solid var(--dt-accent); outline-offset: -2px;
+}
+:host(chat-view) .msg.event-group[open] { border-color: var(--dt-border); }
+:host(chat-view) .group-msg + .group-msg { border-block-start-color: var(--dt-border); }
+:host(chat-view) .history-boundary { color: var(--dt-secondary); }
+:host(tool-execution-view) .tool-card {
+  background: var(--dt-bg); border: 1px solid var(--dt-border); border-radius: var(--dt-radius);
+}
+:host(tool-execution-view) .tool-header { background: var(--dt-panel); color: var(--dt-text); }
+:host(tool-execution-view) .status-label { font-weight: 600; }
+:host(tool-execution-view) .success .status-label,
+:host(tool-execution-view) .success .status-icon { color: var(--dt-success); }
+:host(tool-execution-view) .error .status-label,
+:host(tool-execution-view) .error .status-icon { color: var(--dt-error); }
+:host(tool-execution-view) .running .status-label,
+:host(tool-execution-view) .running .status-icon { color: var(--dt-accent); }
+
+/* 4. Core-owned tool tabs; plugin panel content and its ancestors stay unchanged. */
+:host(workspace-panel) header { border-color: var(--dt-border); }
+:host(workspace-panel) .workspace-header-scroll-frame,
+:host(app-mobile-main-tabs) .mobile-tabs-frame { background: var(--dt-bg); }
+:host(workspace-panel) header .ui-button,
+:host(app-mobile-main-tabs) .mobile-tabs .ui-button {
+  background: var(--dt-bg); color: var(--dt-secondary); border-color: var(--dt-border);
+}
+:host(workspace-panel) header .ui-button.selected,
+:host(app-mobile-main-tabs) .mobile-tabs .ui-button.selected {
+  background: var(--dt-selection); color: var(--dt-text); box-shadow: inset 0 -3px var(--dt-accent);
+}
+
+/* 5. Composer: paint/borders only around the existing CodeMirror input. */
+:host(prompt-editor) footer {
+  background: var(--dt-panel); border: 1px solid var(--dt-border);
+  border-radius: var(--dt-radius); border-color: var(--dt-control-border); margin: 6px 8px;
+}
+:host(prompt-editor) footer:focus-within {
+  border-color: var(--dt-accent); box-shadow: 0 0 0 1px var(--dt-accent);
+}
+:host(prompt-editor) footer.shell-mode { border-color: var(--dt-success); }
+/* Color-only editor integration: preserve CodeMirror's geometry and input path. */
+:host(prompt-editor) .markdown-editor .cm-editor {
+  background: var(--dt-panel); color: var(--dt-text); border-radius: 8px 8px 0 0;
+}
+:host(prompt-editor) .markdown-editor .cm-placeholder,
+:host(prompt-editor) .markdown-editor .cm-argument-hint { color: var(--dt-secondary); }
+:host(prompt-editor) .markdown-editor .cm-content { caret-color: var(--dt-accent); }
+:host(prompt-editor) .markdown-editor .cm-cursor { border-left-color: var(--dt-accent); }
+:host(prompt-editor) .ui-composer-toolbar {
+  background: var(--dt-sidebar); border-color: var(--dt-border);
+  border-end-start-radius: 8px; border-end-end-radius: 8px;
+}
+:host(prompt-editor) [data-composer-action] {
+  color: var(--dt-text); background: transparent; border-color: var(--dt-border);
+}
+:host(prompt-editor) [data-composer-action]:hover:not(:disabled) { background: var(--dt-hover); }
+:host(prompt-editor) [data-composer-action][data-default="true"]:not(:disabled) {
+  background: var(--dt-accent); color: var(--dt-bg); font-weight: 650;
+}
+:host(prompt-editor) [data-composer-action="stop"]:not(:disabled) { color: var(--dt-error); }
+:host(prompt-editor) [data-composer-action]:disabled { color: var(--dt-secondary); opacity: .6; }
+:host(prompt-editor) [data-composer-action]:focus-visible,
+:host(workspace-panel) header .ui-button:focus-visible,
+:host(app-mobile-main-tabs) .mobile-tabs .ui-button:focus-visible {
+  outline: 2px solid var(--dt-accent); outline-offset: -3px;
+}
+:host(prompt-editor) .chat-jumps button,
+:host(chat-view) .chat-jumps button { color: var(--dt-secondary); }
+:host(prompt-editor) .chat-jumps button.following,
+:host(chat-view) .chat-jumps button.following { color: var(--dt-accent); }
+:host(prompt-editor) .chat-jumps button:hover,
+:host(chat-view) .chat-jumps button:hover { color: var(--dt-text); background: var(--dt-selection); }
+:host(prompt-editor) .chat-jumps button:focus-visible,
+:host(chat-view) .chat-jumps button:focus-visible { outline: 2px solid var(--dt-accent); outline-offset: -2px; }
+:host(status-bar) .bar {
+  background: var(--dt-bg); border-color: var(--dt-border); color: var(--dt-secondary);
+}
+:host(app-navigation-panel) .ui-button:disabled,
+:host(workspace-panel) header .ui-button:disabled,
+:host(app-mobile-main-tabs) .mobile-tabs .ui-button:disabled { color: var(--dt-secondary); opacity: .6; }
+
+/* Wide-screen proportions follow the reference; retain the original grid,
+   collapse variables, breakpoints, scroll controllers and native hidden states. */
+@media (min-width: 1381px) {
+  :host(pi-web-app) .shell { --navigation-panel-size: 314px; --workspace-panel-size: minmax(360px, 35vw); }
+}
+@media (max-width: 760px) {
+  :host(chat-view) .chat { padding: 4px; }
+  :host(prompt-editor) footer { margin: 4px; }
+}
+@media (forced-colors: active) {
+  :host(workspace-list) .ui-nav-row[data-current="true"] .ui-nav-row-main,
+  :host(project-list) .ui-nav-row[data-current="true"] .ui-nav-row-main,
+  :host(session-list) .ui-nav-row[data-current="true"] .ui-nav-row-main,
+  :host(session-list) .ui-nav-row[data-selected="true"] .ui-nav-row-main {
+    border-color: Highlight; border-inline-start-width: 4px;
+  }
+  :host(project-list) .ui-nav-row:focus-visible,
+  :host(session-list) .ui-nav-row:focus-visible { outline-color: Highlight; }
+  :host(chat-view) .chat-message[data-speaker="user"] { border-inline-start-color: Highlight; }
+  :host(chat-view) .msg.event-group > summary { color: CanvasText; }
+  :host(prompt-editor) [data-default="true"]:not(:disabled),
+  :host(workspace-panel) header .ui-button.selected,
+  :host(app-mobile-main-tabs) .mobile-tabs .ui-button.selected {
+    outline: 2px solid Highlight; outline-offset: -3px;
+  }
+}

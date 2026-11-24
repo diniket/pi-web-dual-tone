@@ -1,0 +1,953 @@
+[
+ {
+  "viewport": [
+   1792,
+   1080
+  ],
+  "passed": 32,
+  "total": 32,
+  "skipped": 0,
+  "results": [
+   {
+    "name": "real OpenSpec panel mounted (unmodified external package)",
+    "pass": true
+   },
+   {
+    "name": "OpenSpec subtree appearance unchanged by redesign",
+    "pass": true,
+    "details": {
+     "elements": 37
+    }
+   },
+   {
+    "name": "all inherited OpenSpec --pi-* tokens unchanged",
+    "pass": true,
+    "details": {
+     "tokens": 58
+    }
+   },
+   {
+    "name": "redesign really changes core navigation selection",
+    "pass": true
+   },
+   {
+    "name": "core sidebar paint matches palette",
+    "pass": true
+   },
+   {
+    "name": "core chat paint matches palette",
+    "pass": true
+   },
+   {
+    "name": "user message uses the blue tone",
+    "pass": true,
+    "details": {
+     "actual": "rgb(23, 46, 71)"
+    }
+   },
+   {
+    "name": "agent message uses the teal tone",
+    "pass": true,
+    "details": {
+     "actual": "rgb(20, 37, 34)"
+    }
+   },
+   {
+    "name": "user and agent messages are visually distinct",
+    "pass": true
+   },
+   {
+    "name": "navigation label typography matches palette",
+    "pass": true
+   },
+   {
+    "name": "project surfaces use night blue",
+    "pass": true,
+    "details": {
+     "actual": "rgb(20, 30, 43)"
+    }
+   },
+   {
+    "name": "session surfaces use petrol green",
+    "pass": true,
+    "details": {
+     "actual": "rgb(19, 34, 31)"
+    }
+   },
+   {
+    "name": "selected project uses the deep blue selection",
+    "pass": true,
+    "details": {
+     "actual": "rgb(32, 61, 92)"
+    }
+   },
+   {
+    "name": "selected session uses the deep teal selection",
+    "pass": true,
+    "details": {
+     "actual": "rgb(32, 55, 47)"
+    }
+   },
+   {
+    "name": "event rows stay compact and quiet",
+    "pass": true,
+    "details": {
+     "fontSize": "12px",
+     "minHeight": "26px",
+     "background": "rgba(0, 0, 0, 0)"
+    }
+   },
+   {
+    "name": "event label keeps AA contrast on the chat surface",
+    "pass": true,
+    "details": {
+     "actual": "rgb(137, 152, 170)"
+    }
+   },
+   {
+    "name": "native event disclosure expands",
+    "pass": true
+   },
+   {
+    "name": "expanded event header becomes legible",
+    "pass": true,
+    "details": {
+     "background": "rgb(28, 35, 45)",
+     "color": "rgb(230, 237, 243)"
+    }
+   },
+   {
+    "name": "real core tool cards rendered",
+    "pass": true,
+    "details": {
+     "count": 2
+    }
+   },
+   {
+    "name": "tool heading paint matches panel palette",
+    "pass": true
+   },
+   {
+    "name": "tool statuses have distinct readable colors",
+    "pass": true
+   },
+   {
+    "name": "native event disclosure collapses",
+    "pass": true
+   },
+   {
+    "name": "session selection remains connected to existing row handler",
+    "pass": true
+   },
+   {
+    "name": "native session action popup opens",
+    "pass": true
+   },
+   {
+    "name": "composer remains editable",
+    "pass": true
+   },
+   {
+    "name": "default composer action uses accessible accent treatment",
+    "pass": true
+   },
+   {
+    "name": "composer placeholder contrast uses secondary token",
+    "pass": true
+   },
+   {
+    "name": "composer focus is visible",
+    "pass": true
+   },
+   {
+    "name": "chat scroll remains independently contained",
+    "pass": true,
+    "details": {
+     "height": 915,
+     "scrollHeight": 915
+    }
+   },
+   {
+    "name": "composer stays within viewport",
+    "pass": true
+   },
+   {
+    "name": "document has no horizontal overflow",
+    "pass": true
+   },
+   {
+    "name": "plugin panel has no horizontal overflow",
+    "pass": true
+   }
+  ],
+  "requestedViewport": [
+   1792,
+   1080
+  ],
+  "tag": "1792x1080"
+ },
+ {
+  "viewport": [
+   1381,
+   900
+  ],
+  "passed": 32,
+  "total": 32,
+  "skipped": 0,
+  "results": [
+   {
+    "name": "real OpenSpec panel mounted (unmodified external package)",
+    "pass": true
+   },
+   {
+    "name": "OpenSpec subtree appearance unchanged by redesign",
+    "pass": true,
+    "details": {
+     "elements": 37
+    }
+   },
+   {
+    "name": "all inherited OpenSpec --pi-* tokens unchanged",
+    "pass": true,
+    "details": {
+     "tokens": 58
+    }
+   },
+   {
+    "name": "redesign really changes core navigation selection",
+    "pass": true
+   },
+   {
+    "name": "core sidebar paint matches palette",
+    "pass": true
+   },
+   {
+    "name": "core chat paint matches palette",
+    "pass": true
+   },
+   {
+    "name": "user message uses the blue tone",
+    "pass": true,
+    "details": {
+     "actual": "rgb(23, 46, 71)"
+    }
+   },
+   {
+    "name": "agent message uses the teal tone",
+    "pass": true,
+    "details": {
+     "actual": "rgb(20, 37, 34)"
+    }
+   },
+   {
+    "name": "user and agent messages are visually distinct",
+    "pass": true
+   },
+   {
+    "name": "navigation label typography matches palette",
+    "pass": true
+   },
+   {
+    "name": "project surfaces use night blue",
+    "pass": true,
+    "details": {
+     "actual": "rgb(20, 30, 43)"
+    }
+   },
+   {
+    "name": "session surfaces use petrol green",
+    "pass": true,
+    "details": {
+     "actual": "rgb(19, 34, 31)"
+    }
+   },
+   {
+    "name": "selected project uses the deep blue selection",
+    "pass": true,
+    "details": {
+     "actual": "rgb(32, 61, 92)"
+    }
+   },
+   {
+    "name": "selected session uses the deep teal selection",
+    "pass": true,
+    "details": {
+     "actual": "rgb(32, 55, 47)"
+    }
+   },
+   {
+    "name": "event rows stay compact and quiet",
+    "pass": true,
+    "details": {
+     "fontSize": "12px",
+     "minHeight": "26px",
+     "background": "rgba(0, 0, 0, 0)"
+    }
+   },
+   {
+    "name": "event label keeps AA contrast on the chat surface",
+    "pass": true,
+    "details": {
+     "actual": "rgb(137, 152, 170)"
+    }
+   },
+   {
+    "name": "native event disclosure expands",
+    "pass": true
+   },
+   {
+    "name": "expanded event header becomes legible",
+    "pass": true,
+    "details": {
+     "background": "rgb(28, 35, 45)",
+     "color": "rgb(230, 237, 243)"
+    }
+   },
+   {
+    "name": "real core tool cards rendered",
+    "pass": true,
+    "details": {
+     "count": 2
+    }
+   },
+   {
+    "name": "tool heading paint matches panel palette",
+    "pass": true
+   },
+   {
+    "name": "tool statuses have distinct readable colors",
+    "pass": true
+   },
+   {
+    "name": "native event disclosure collapses",
+    "pass": true
+   },
+   {
+    "name": "session selection remains connected to existing row handler",
+    "pass": true
+   },
+   {
+    "name": "native session action popup opens",
+    "pass": true
+   },
+   {
+    "name": "composer remains editable",
+    "pass": true
+   },
+   {
+    "name": "default composer action uses accessible accent treatment",
+    "pass": true
+   },
+   {
+    "name": "composer placeholder contrast uses secondary token",
+    "pass": true
+   },
+   {
+    "name": "composer focus is visible",
+    "pass": true
+   },
+   {
+    "name": "chat scroll remains independently contained",
+    "pass": true,
+    "details": {
+     "height": 735,
+     "scrollHeight": 776
+    }
+   },
+   {
+    "name": "composer stays within viewport",
+    "pass": true
+   },
+   {
+    "name": "document has no horizontal overflow",
+    "pass": true
+   },
+   {
+    "name": "plugin panel has no horizontal overflow",
+    "pass": true
+   }
+  ],
+  "requestedViewport": [
+   1381,
+   900
+  ],
+  "tag": "1381x900"
+ },
+ {
+  "viewport": [
+   1024,
+   768
+  ],
+  "passed": 32,
+  "total": 32,
+  "skipped": 0,
+  "results": [
+   {
+    "name": "real OpenSpec panel mounted (unmodified external package)",
+    "pass": true
+   },
+   {
+    "name": "OpenSpec subtree appearance unchanged by redesign",
+    "pass": true,
+    "details": {
+     "elements": 37
+    }
+   },
+   {
+    "name": "all inherited OpenSpec --pi-* tokens unchanged",
+    "pass": true,
+    "details": {
+     "tokens": 58
+    }
+   },
+   {
+    "name": "redesign really changes core navigation selection",
+    "pass": true
+   },
+   {
+    "name": "core sidebar paint matches palette",
+    "pass": true
+   },
+   {
+    "name": "core chat paint matches palette",
+    "pass": true
+   },
+   {
+    "name": "user message uses the blue tone",
+    "pass": true,
+    "details": {
+     "actual": "rgb(23, 46, 71)"
+    }
+   },
+   {
+    "name": "agent message uses the teal tone",
+    "pass": true,
+    "details": {
+     "actual": "rgb(20, 37, 34)"
+    }
+   },
+   {
+    "name": "user and agent messages are visually distinct",
+    "pass": true
+   },
+   {
+    "name": "navigation label typography matches palette",
+    "pass": true
+   },
+   {
+    "name": "project surfaces use night blue",
+    "pass": true,
+    "details": {
+     "actual": "rgb(20, 30, 43)"
+    }
+   },
+   {
+    "name": "session surfaces use petrol green",
+    "pass": true,
+    "details": {
+     "actual": "rgb(19, 34, 31)"
+    }
+   },
+   {
+    "name": "selected project uses the deep blue selection",
+    "pass": true,
+    "details": {
+     "actual": "rgb(32, 61, 92)"
+    }
+   },
+   {
+    "name": "selected session uses the deep teal selection",
+    "pass": true,
+    "details": {
+     "actual": "rgb(32, 55, 47)"
+    }
+   },
+   {
+    "name": "event rows stay compact and quiet",
+    "pass": true,
+    "details": {
+     "fontSize": "12px",
+     "minHeight": "26px",
+     "background": "rgba(0, 0, 0, 0)"
+    }
+   },
+   {
+    "name": "event label keeps AA contrast on the chat surface",
+    "pass": true,
+    "details": {
+     "actual": "rgb(137, 152, 170)"
+    }
+   },
+   {
+    "name": "native event disclosure expands",
+    "pass": true
+   },
+   {
+    "name": "expanded event header becomes legible",
+    "pass": true,
+    "details": {
+     "background": "rgb(28, 35, 45)",
+     "color": "rgb(230, 237, 243)"
+    }
+   },
+   {
+    "name": "real core tool cards rendered",
+    "pass": true,
+    "details": {
+     "count": 2
+    }
+   },
+   {
+    "name": "tool heading paint matches panel palette",
+    "pass": true
+   },
+   {
+    "name": "tool statuses have distinct readable colors",
+    "pass": true
+   },
+   {
+    "name": "native event disclosure collapses",
+    "pass": true
+   },
+   {
+    "name": "session selection remains connected to existing row handler",
+    "pass": true
+   },
+   {
+    "name": "native session action popup opens",
+    "pass": true
+   },
+   {
+    "name": "composer remains editable",
+    "pass": true
+   },
+   {
+    "name": "default composer action uses accessible accent treatment",
+    "pass": true
+   },
+   {
+    "name": "composer placeholder contrast uses secondary token",
+    "pass": true
+   },
+   {
+    "name": "composer focus is visible",
+    "pass": true
+   },
+   {
+    "name": "chat scroll remains independently contained",
+    "pass": true,
+    "details": {
+     "height": 548,
+     "scrollHeight": 754
+    }
+   },
+   {
+    "name": "composer stays within viewport",
+    "pass": true
+   },
+   {
+    "name": "document has no horizontal overflow",
+    "pass": true
+   },
+   {
+    "name": "plugin panel has no horizontal overflow",
+    "pass": true
+   }
+  ],
+  "requestedViewport": [
+   1024,
+   768
+  ],
+  "tag": "1024x768"
+ },
+ {
+  "viewport": [
+   390,
+   844
+  ],
+  "passed": 32,
+  "total": 32,
+  "skipped": 1,
+  "results": [
+   {
+    "name": "real OpenSpec panel mounted (unmodified external package)",
+    "pass": true
+   },
+   {
+    "name": "OpenSpec subtree appearance unchanged by redesign",
+    "pass": true,
+    "details": {
+     "elements": 37
+    }
+   },
+   {
+    "name": "all inherited OpenSpec --pi-* tokens unchanged",
+    "pass": true,
+    "details": {
+     "tokens": 58
+    }
+   },
+   {
+    "name": "redesign really changes core navigation selection",
+    "pass": true
+   },
+   {
+    "name": "core sidebar paint matches palette",
+    "pass": true
+   },
+   {
+    "name": "core chat paint matches palette",
+    "pass": true
+   },
+   {
+    "name": "user message uses the blue tone",
+    "pass": true,
+    "details": {
+     "actual": "rgb(23, 46, 71)"
+    }
+   },
+   {
+    "name": "agent message uses the teal tone",
+    "pass": true,
+    "details": {
+     "actual": "rgb(20, 37, 34)"
+    }
+   },
+   {
+    "name": "user and agent messages are visually distinct",
+    "pass": true
+   },
+   {
+    "name": "navigation label typography",
+    "skipped": true,
+    "details": "Project sections are collapsed at this viewport; verified in desktop checks."
+   },
+   {
+    "name": "project surfaces use night blue",
+    "pass": true,
+    "details": {
+     "actual": "rgb(20, 30, 43)"
+    }
+   },
+   {
+    "name": "session surfaces use petrol green",
+    "pass": true,
+    "details": {
+     "actual": "rgb(19, 34, 31)"
+    }
+   },
+   {
+    "name": "selected session uses the deep teal selection",
+    "pass": true,
+    "details": {
+     "actual": "rgb(32, 55, 47)"
+    }
+   },
+   {
+    "name": "event rows stay compact and quiet",
+    "pass": true,
+    "details": {
+     "fontSize": "12px",
+     "minHeight": "26px",
+     "background": "rgba(0, 0, 0, 0)"
+    }
+   },
+   {
+    "name": "event label keeps AA contrast on the chat surface",
+    "pass": true,
+    "details": {
+     "actual": "rgb(137, 152, 170)"
+    }
+   },
+   {
+    "name": "native event disclosure expands",
+    "pass": true
+   },
+   {
+    "name": "expanded event header becomes legible",
+    "pass": true,
+    "details": {
+     "background": "rgb(28, 35, 45)",
+     "color": "rgb(230, 237, 243)"
+    }
+   },
+   {
+    "name": "real core tool cards rendered",
+    "pass": true,
+    "details": {
+     "count": 2
+    }
+   },
+   {
+    "name": "tool heading paint matches panel palette",
+    "pass": true
+   },
+   {
+    "name": "tool statuses have distinct readable colors",
+    "pass": true
+   },
+   {
+    "name": "native event disclosure collapses",
+    "pass": true
+   },
+   {
+    "name": "session selection remains connected to existing row handler",
+    "pass": true
+   },
+   {
+    "name": "native session action popup opens",
+    "pass": true
+   },
+   {
+    "name": "composer remains editable",
+    "pass": true
+   },
+   {
+    "name": "default composer action uses accessible accent treatment",
+    "pass": true
+   },
+   {
+    "name": "composer placeholder contrast uses secondary token",
+    "pass": true
+   },
+   {
+    "name": "composer focus is visible",
+    "pass": true
+   },
+   {
+    "name": "chat scroll remains independently contained",
+    "pass": true,
+    "details": {
+     "height": 593,
+     "scrollHeight": 833
+    }
+   },
+   {
+    "name": "composer stays within viewport",
+    "pass": true
+   },
+   {
+    "name": "document has no horizontal overflow",
+    "pass": true
+   },
+   {
+    "name": "plugin panel has no horizontal overflow",
+    "pass": true
+   },
+   {
+    "name": "mobile project surface uses night blue",
+    "pass": true,
+    "details": {
+     "actual": "rgb(20, 30, 43)"
+    }
+   },
+   {
+    "name": "mobile selected project uses the deep blue selection",
+    "pass": true,
+    "details": {
+     "actual": "rgb(32, 61, 92)"
+    }
+   }
+  ],
+  "requestedViewport": [
+   390,
+   844
+  ],
+  "tag": "390x844"
+ },
+ {
+  "viewport": [
+   320,
+   700
+  ],
+  "passed": 32,
+  "total": 32,
+  "skipped": 1,
+  "results": [
+   {
+    "name": "real OpenSpec panel mounted (unmodified external package)",
+    "pass": true
+   },
+   {
+    "name": "OpenSpec subtree appearance unchanged by redesign",
+    "pass": true,
+    "details": {
+     "elements": 37
+    }
+   },
+   {
+    "name": "all inherited OpenSpec --pi-* tokens unchanged",
+    "pass": true,
+    "details": {
+     "tokens": 58
+    }
+   },
+   {
+    "name": "redesign really changes core navigation selection",
+    "pass": true
+   },
+   {
+    "name": "core sidebar paint matches palette",
+    "pass": true
+   },
+   {
+    "name": "core chat paint matches palette",
+    "pass": true
+   },
+   {
+    "name": "user message uses the blue tone",
+    "pass": true,
+    "details": {
+     "actual": "rgb(23, 46, 71)"
+    }
+   },
+   {
+    "name": "agent message uses the teal tone",
+    "pass": true,
+    "details": {
+     "actual": "rgb(20, 37, 34)"
+    }
+   },
+   {
+    "name": "user and agent messages are visually distinct",
+    "pass": true
+   },
+   {
+    "name": "navigation label typography",
+    "skipped": true,
+    "details": "Project sections are collapsed at this viewport; verified in desktop checks."
+   },
+   {
+    "name": "project surfaces use night blue",
+    "pass": true,
+    "details": {
+     "actual": "rgb(20, 30, 43)"
+    }
+   },
+   {
+    "name": "session surfaces use petrol green",
+    "pass": true,
+    "details": {
+     "actual": "rgb(19, 34, 31)"
+    }
+   },
+   {
+    "name": "selected session uses the deep teal selection",
+    "pass": true,
+    "details": {
+     "actual": "rgb(32, 55, 47)"
+    }
+   },
+   {
+    "name": "event rows stay compact and quiet",
+    "pass": true,
+    "details": {
+     "fontSize": "12px",
+     "minHeight": "26px",
+     "background": "rgba(0, 0, 0, 0)"
+    }
+   },
+   {
+    "name": "event label keeps AA contrast on the chat surface",
+    "pass": true,
+    "details": {
+     "actual": "rgb(137, 152, 170)"
+    }
+   },
+   {
+    "name": "native event disclosure expands",
+    "pass": true
+   },
+   {
+    "name": "expanded event header becomes legible",
+    "pass": true,
+    "details": {
+     "background": "rgb(28, 35, 45)",
+     "color": "rgb(230, 237, 243)"
+    }
+   },
+   {
+    "name": "real core tool cards rendered",
+    "pass": true,
+    "details": {
+     "count": 2
+    }
+   },
+   {
+    "name": "tool heading paint matches panel palette",
+    "pass": true
+   },
+   {
+    "name": "tool statuses have distinct readable colors",
+    "pass": true
+   },
+   {
+    "name": "native event disclosure collapses",
+    "pass": true
+   },
+   {
+    "name": "session selection remains connected to existing row handler",
+    "pass": true
+   },
+   {
+    "name": "native session action popup opens",
+    "pass": true
+   },
+   {
+    "name": "composer remains editable",
+    "pass": true
+   },
+   {
+    "name": "default composer action uses accessible accent treatment",
+    "pass": true
+   },
+   {
+    "name": "composer placeholder contrast uses secondary token",
+    "pass": true
+   },
+   {
+    "name": "composer focus is visible",
+    "pass": true
+   },
+   {
+    "name": "chat scroll remains independently contained",
+    "pass": true,
+    "details": {
+     "height": 449,
+     "scrollHeight": 909
+    }
+   },
+   {
+    "name": "composer stays within viewport",
+    "pass": true
+   },
+   {
+    "name": "document has no horizontal overflow",
+    "pass": true
+   },
+   {
+    "name": "plugin panel has no horizontal overflow",
+    "pass": true
+   },
+   {
+    "name": "mobile project surface uses night blue",
+    "pass": true,
+    "details": {
+     "actual": "rgb(20, 30, 43)"
+    }
+   },
+   {
+    "name": "mobile selected project uses the deep blue selection",
+    "pass": true,
+    "details": {
+     "actual": "rgb(32, 61, 92)"
+    }
+   }
+  ],
+  "requestedViewport": [
+   320,
+   700
+  ],
+  "tag": "320x700"
+ }
+]

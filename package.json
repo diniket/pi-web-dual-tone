@@ -1,0 +1,76 @@
+{
+  "name": "pi-web-dual-tone",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Two-tone dark theme for Pi Web: blue for projects and user messages, deep teal for sessions and agent messages, discreet events, plugins untouched.",
+  "keywords": [
+    "pi-web.dev-plugin",
+    "pi-web-plugin",
+    "pi-web-theme",
+    "pi-web",
+    "pi-coding-agent",
+    "theme",
+    "dark-theme",
+    "dual-tone",
+    "contrast",
+    "accessibility"
+  ],
+  "license": "MIT",
+  "author": "diniket",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "files": [
+    "assets",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "piWeb": {
+    "plugins": [
+      {
+        "id": "dual-tone",
+        "browserRoot": "assets",
+        "defaultEnabled": true,
+        "themes": [
+          {
+            "id": "dual-tone",
+            "name": "Dual Tone",
+            "description": "Blue projects and user messages, teal sessions and agent messages; plugins keep the official Pi Web Dark palette.",
+            "colorScheme": "dark",
+            "stylesheets": [
+              {
+                "id": "appearance",
+                "path": "theme.css",
+                "order": 2000
+              }
+            ],
+            "loadingScreen": {
+              "background": "#0D1117",
+              "foreground": "#E6EDF3",
+              "logo": "#69A9F9"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "piWebTested": {
+    "piWebVersion": "1.202611.2",
+    "piWebCommit": "07b766566366f1c136934dd610fdbcb23c2f3f70"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/build.mjs --check && node --test tests/*.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diniket/pi-web-dual-tone.git"
+  },
+  "homepage": "https://github.com/diniket/pi-web-dual-tone#readme",
+  "bugs": {
+    "url": "https://github.com/diniket/pi-web-dual-tone/issues"
+  }
+}

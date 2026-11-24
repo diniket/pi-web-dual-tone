@@ -1,0 +1,53 @@
+{
+ "checkedAt": "2026-11-24T16:40:00+01:00",
+ "gateway": "http://127.0.0.1:8617 (isolated preview, both plugins mounted)",
+ "themes": [
+  "dark-contrast:dark-contrast",
+  "dual-tone:dual-tone",
+  "themes:pi-web-dark",
+  "themes:pi-web-light",
+  "themes:classic",
+  "themes:paper",
+  "themes:graphite"
+ ],
+ "bothListed": true,
+ "dualSelection": [
+  {
+   "id": "dual-tone:dual-tone",
+   "name": "Dual Tone",
+   "pluginId": "dual-tone",
+   "stylesheets": [
+    "pi-web-theme-assets/dual-tone/revisions/sha256%3A1fd42af550f13c0abe2d0a9703964cd5cdd5c4026b9d4112bfd627bb6a411380/theme.css"
+   ]
+  }
+ ],
+ "darkSelection": [
+  {
+   "id": "dark-contrast:dark-contrast",
+   "name": "Dark Contrast",
+   "pluginId": "dark-contrast",
+   "stylesheets": [
+    "pi-web-theme-assets/dark-contrast/revisions/sha256%3A830c4bfd8c982ad0b4d12d27c535d9eda3cc8d19c613ea238f2b980aebf1041f/theme.css"
+   ]
+  }
+ ],
+ "selectionIsolation": true,
+ "assetChecks": {
+  "dual": {
+   "status": 200,
+   "bytes": 17648,
+   "dtTokens": 35,
+   "dcTokens": 0,
+   "piTokens": 52,
+   "darkContrastMentions": 0
+  },
+  "dark": {
+   "status": 200,
+   "bytes": 14355,
+   "dtTokens": 0,
+   "dcTokens": 14,
+   "piTokens": 52
+  }
+ },
+ "assetsIsolated": true
+}

@@ -1,0 +1,45 @@
+/* Namespaced additions only. Never replace inherited --pi-* plugin tokens. */
+:root {
+  /* Core neutral palette (shared with the dark baseline of the theme family). */
+  --dt-bg: #0D1117;
+  --dt-sidebar: #161B22;
+  --dt-panel: #1C232D;
+  --dt-hover: #252F3D;
+  --dt-border: #374151;
+  --dt-control-border: #6E7D90;
+  --dt-text: #E6EDF3;
+  --dt-secondary: #AAB6C5;
+  --dt-accent: #388BFD;
+  --dt-selection: #142E4D;
+  --dt-success: #3FB950;
+  --dt-error: #F85149;
+  --dt-radius: 9px;
+  --dt-space: 8px;
+
+  /* Blue tone: projects and user messages. */
+  --dt-project-surface: #141E2B;
+  --dt-project-border: #293A50;
+  --dt-project-heading: #8EB8EE;
+  --dt-project-meta: #8E9FB2;
+  --dt-project-meta-selected: #AAB6C5;
+  --dt-project-hover: #1B2A3A;
+  --dt-project-selected: #203D5C;
+  --dt-project-edge: #69A9F9;
+  --dt-user-surface: #172E47;
+  --dt-user-border: #345779;
+  --dt-user-edge: #69A9F9;
+
+  /* Teal tone: sessions and agent messages. */
+  --dt-session-surface: #13221F;
+  --dt-session-border: #2C443E;
+  --dt-session-heading: #91BBAA;
+  --dt-session-hover: #192F29;
+  --dt-session-selected: #20372F;
+  --dt-session-edge: #75B49E;
+  --dt-assistant-surface: #142522;
+  --dt-assistant-border: #2C443E;
+  --dt-assistant-edge: #527E70;
+
+  /* Discreet event rows. */
+  --dt-event-label: #8998AA;
+}
