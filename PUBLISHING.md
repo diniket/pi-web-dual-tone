@@ -1,29 +1,29 @@
 # Preparazione alla pubblicazione
 
-**Stato: NON pubblicato.** Nessun repository remoto è stato creato, nessun push è stato
-eseguito, nessun pacchetto è stato inviato a npm. Il remote locale `origin` punta già
-all'URL previsto, ma non è stato contattato in scrittura.
+**Stato: repository GitHub pubblicato, npm NON pubblicato.** Il repository
+[`diniket/pi-web-dual-tone`](https://github.com/diniket/pi-web-dual-tone) è pubblico sul
+branch `main`; nessun pacchetto è stato inviato a npm.
 
-## Verifiche già eseguite
+## Verifiche
 
 | Voce | Esito |
 |---|---|
-| Nome npm `pi-web-dual-tone` | libero (HTTP 404 sul registry) |
-| Repository GitHub `diniket/pi-web-dual-tone` | libero (HTTP 404 sull'API) |
+| Repository GitHub `diniket/pi-web-dual-tone` | **pubblico**, branch `main`, topic impostati |
+| Nome npm `pi-web-dual-tone` | libero (HTTP 404 sul registry, verificato prima del rilascio GitHub) |
 | `npm test` | 41/41 |
 | `npm pack --dry-run` | 8 file, 8.4 kB |
 | Coesistenza con Dark Contrast | verificata, ID e fogli separati |
 | Repository Dark Contrast originale | invariato, working tree pulito |
-| Istanza Pi Web operativa e PUCP | non toccati |
+| Istanza Pi Web operativa e PUCP | non toccati dalla pubblicazione GitHub |
+| Screenshot pubblicati | solo sintetici, nomi e percorsi fittizi |
 
-## Metadati proposti per GitHub
+## Metadati GitHub (applicati)
 
 - **Nome**: `pi-web-dual-tone`
 - **Descrizione**: `Two-tone dark theme for Pi Web: blue projects and user messages, teal sessions and agent messages, plugins untouched.`
 - **Homepage**: `https://github.com/diniket/pi-web-dual-tone#readme`
 - **Topic**: `pi-web`, `pi-web-theme`, `pi-coding-agent`, `theme`, `dark-theme`, `accessibility`
 - **Licenza**: MIT (copyright 2026 diniket, invariato)
-- **Release iniziale**: tag `v1.0.0`, titolo `Dual Tone 1.0.0`
 
 ## Metadati già nel pacchetto
 
@@ -32,42 +32,38 @@ all'URL previsto, ma non è stato contattato in scrittura.
 `publishConfig.access = public`, blocco `piWeb` (plugin `dual-tone`, tema `dual-tone`),
 `piWebTested` (Pi Web `1.202611.2`, commit `07b7665`) e i link repository/homepage/bugs.
 
-## Comandi da eseguire solo dopo approvazione esplicita
+## Pubblicazione npm — da eseguire solo dopo approvazione esplicita
 
 ```bash
-# 1. Repository GitHub e primo push
-gh repo create diniket/pi-web-dual-tone --public \
-  --description "Two-tone dark theme for Pi Web: blue projects and user messages, teal sessions and agent messages, plugins untouched." \
-  --source=. --remote=origin --push
-
-# 2. Tag della release
-git tag -a v1.0.0 -m "Dual Tone 1.0.0"
-git push origin v1.0.0
-
-# 3. Pubblicazione npm (dopo aver rifatto i controlli)
+# 1. Controlli finali
 npm test
 npm pack --dry-run
+
+# 2. Pubblicazione
 npm publish --access public
 
-# 4. Verifica post-pubblicazione
+# 3. Verifica post-pubblicazione
 npm view pi-web-dual-tone version
 npm view pi-web-dual-tone dist.tarball
 pi install npm:pi-web-dual-tone   # su un profilo di prova, non sull'istanza operativa
 ```
 
-Impostare i topic GitHub dalla UI o con:
+Tag e release GitHub (opzionali, non ancora creati):
 
 ```bash
-gh repo edit diniket/pi-web-dual-tone --add-topic pi-web --add-topic pi-web-theme \
-  --add-topic pi-coding-agent --add-topic theme --add-topic dark-theme --add-topic accessibility
+git tag -a v1.0.0 -m "Dual Tone 1.0.0"
+git push origin v1.0.0
+gh release create v1.0.0 --title "Dual Tone 1.0.0" --notes-file CHANGELOG.md
 ```
 
 ## Rollback
 
-- **npm**: `npm unpublish pi-web-dual-tone@1.0.0` (soggetto alla policy npm sulle 72 ore);
-  in alternativa `npm deprecate pi-web-dual-tone@1.0.0 "ritirato"`.
-- **GitHub**: eliminare la release/tag e il repository remoto; il repository locale resta
-  intatto e può essere ripubblicato.
-- **Pi Web**: scegliere un altro tema e `pi remove npm:pi-web-dual-tone`.
+- **GitHub**: eliminare release/tag e repository remoto; il repository locale resta
+  intatto. `gh repo delete diniket/pi-web-dual-tone`.
+- **npm** (solo dopo una futura pubblicazione): `npm unpublish pi-web-dual-tone@1.0.0`
+  (soggetto alla policy npm sulle 72 ore) oppure `npm deprecate`.
+- **Pi Web**: scegliere un altro tema e rimuovere il plugin; con il mount locale attuale,
+  `rm ~/.pi-web/plugins/dual-tone`.
 
-Nessuna di queste operazioni è stata eseguita.
+La pubblicazione su GitHub è stata eseguita su autorizzazione dell'utente; la
+pubblicazione npm non è stata eseguita.
